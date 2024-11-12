@@ -13,14 +13,12 @@
 <body>
 
     <header>
-        <h1>Todo list</h1>
-
+        <h1><i class="fa fa-tasks" aria-hidden="true"></i> Tasker</h1>
         <div class="date">
             Today
             <i class="fa fa-calendar" aria-hidden="true" id="date-icon"></i>
         </div>
-    </header>
-    
+    </header>       
 
     <div class="list">
         <div class="list-item">
@@ -74,12 +72,53 @@
 
     <nav class="main-nav">
         <ul>
-            <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <li><a href="/"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-            <li><a href="/"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-            <li><a href="/"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-            <li><a href="/"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+            <!-- <li><a href="/" class="home"><i class="fa fa-home" aria-hidden="true"></i></a></li> -->
+            <!-- <li><a href="/" class="history"><i class="fa fa-history" aria-hidden="true"></i></a></li> -->
+            <li><a href="#" class="new"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+            <!-- <li><a href="/" class="notif"><i class="fa fa-bell" aria-hidden="true"></i></a></li> -->
+            <!-- <li><a href="/" class="user"><i class="fa fa-user" aria-hidden="true"></i></a></li> -->
         </ul>
     </nav>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Task</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+            <div class="form">
+
+                
+                <label for="task">
+                    <span>Enter your task here</span>
+                    <textarea name="task" id="task" placeholder="Task"></textarea>
+                    <!-- <input type="text" placeholder="Task"  id="task"> -->
+                </label>
+
+                <label for="date">
+                    <span>Date to finish</span>
+                    <input type="text" placeholder="Date" id="date">
+                </label>
+
+                <label for="date">
+                    <span>Status of this task</span>
+                    <select name="status" id="status">
+                        <option value="">Status</option>
+                        <option value="success">success</option>
+                        <option value="missing">missing</option>
+                        <option value="pending">pending</option>
+                        <option value="failed">failed</option>
+                    </select>
+                </label>
+
+                <button class="submit"><i class="fa fa-save" aria-hidden="true"></i> Submit </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js" async="async" defer="defer"   ></script>
 </body>
 </html>

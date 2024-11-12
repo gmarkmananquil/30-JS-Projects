@@ -1,8 +1,19 @@
 @import url(../reset.css);
 
+:root{
+    --bg: #24263b;
+    --bg-history: #1C1E33;
+    --bg-nav: rgb(44,48,73);
+    --bg-tag-red: #EE7C83;
+    --bg-tag-green: #1DC9A0;
+    --bg-grey: rgb(235,235,235);
+    --text-dark: #5f5f5f;
+    --text-white: #fff;
+}
+
 body{
     font-family: "Roboto", sans-serif;
-    background-color: #000;
+    background: var(--bg);
     color: #eee;
     padding: 1rem;
 }
@@ -17,6 +28,9 @@ header{
 header .date{
     font-size: 0.8em;
     letter-spacing: 1px;
+    background: var(--bg-nav);
+    padding: 0.8rem 1rem;
+    border-radius: 0.2rem;
 }
 
 header .date i{
@@ -28,7 +42,7 @@ header .date i{
     gap: 1rem;
     grid-template-columns: auto 1fr;
     background: #fff;
-    color: #888;
+    color: var(--text-dark);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.4rem;
@@ -50,7 +64,7 @@ header .date i{
     display: grid;
     grid-template-columns: 20% 1fr;
     position: relative;
-    background: #888;
+    background: var(--bg-history);
     padding: 1rem;
     border-radius: 0.2rem;
     margin-bottom: 2rem;
@@ -66,15 +80,15 @@ header .date i{
     right: 1.5rem;
     top: -1rem;
     padding: 0.3rem 0.5rem;
-    background: red;
+    background: var(--bg-tag-red);
     border-radius: 0.3rem;
     color: #fff;
     font-size: 0.7em;
-    box-shadow: 0px 0px 2px #fff;
+    box-shadow: 0px 0px 1px #fff;
 }
 
 .tag.success{
-    background: green;
+    background: var(--bg-tag-green);
 }
 
 .main-nav{
@@ -83,7 +97,7 @@ header .date i{
     left: 0;
     width: 100%;
     height: 80px;
-    background: #111;
+    background: var(--bg-nav);
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -95,4 +109,87 @@ header .date i{
     justify-content: space-around;
     font-size: 2rem;
     align-items: center;
+}
+
+.modal{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    display: none;
+}
+
+.modal-content{
+    width: 80%;
+    min-height: 60vh;
+    background: var(--bg-history);
+    padding: 2rem;
+    position: relative;
+    border-radius: 0.2rem;
+    position: relative;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.modal-header .close{
+    display: inline-block;
+    font-size: 1.5rem;
+    background: var(--bg-tag-red);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 1.8rem;
+    cursor: pointer;
+    /* border-radius: 5rem; */
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form input, .form textarea, .form select{
+    padding: 0.5rem;
+    color: var(--text-dark);
+    background: var(--bg-grey);
+}
+
+.form textarea{
+    min-height: 15vh;
+}
+
+.form .submit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.1rem;
+    background: var(--bg-grey);
+    color: var(--bg-history);
+    font-size: 2rem;
+}
+
+.modal.show{
+    display: flex;
 }
