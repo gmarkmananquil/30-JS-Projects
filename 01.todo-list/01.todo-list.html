@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
+    <header>
+        <h1>Todo list</h1>
+
+        <div class="date">
+            Today
+            <i class="fa fa-calendar" aria-hidden="true" id="date-icon"></i>
+        </div>
+    </header>
     
+
+    <div class="list">
+        <div class="list-item">
+            <span class="icon-wrapper">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            <span class="text">
+                Dashboard project for school
+            </span>
+        </div>
+        <div class="list-item">
+            <span class="icon-wrapper">
+                <i class="fa fa-map" aria-hidden="true"></i>
+            </span>
+            <span class="text">
+                Meeting Mr.Brian O'Connor
+            </span>
+        </div>
+        <div class="list-item">
+            <span class="icon-wrapper">
+                <i class="fa fa-bank" aria-hidden="true"></i>
+            </span>
+            <span class="text">
+                Go to Bank Office
+            </span>
+        </div>
+    </div>
+
+    <div class="history">
+        <h3>Past Activity</h3>
+        <ul>
+            <li class="hist-item">
+                <span class="date">Mon, Nov 5</span>
+                <span class="text">Stikom Library Project</span>
+                <span class="tag">Missing</span>
+                
+            </li>
+            <li class="hist-item">
+                <span class="date">Mon, Nov 5</span>
+                <span class="text">Design Thinking Workshop</span>
+                <span class="tag success">Success</span>
+                
+            </li>
+            <li class="hist-item">
+                <span class="date">Mon, Nov 5</span>
+                <span class="text">Making babies</span>
+                <span class="tag">Success</span>                
+            </li>
+        </ul>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="/"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+            <li><a href="/"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+            <li><a href="/"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+            <li><a href="/"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        </ul>
+    </nav>
 </body>
 </html>
