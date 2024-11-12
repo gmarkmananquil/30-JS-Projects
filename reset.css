@@ -1,0 +1,65 @@
+/* Reset box-sizing to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and margin */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+figure, hr, fieldset,
+ul, ol, li,
+table, th, td,
+button, input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set consistent font sizes and remove default font inheritance */
+html {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/* Remove list-style and text decoration */
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set images, videos, and iframe elements to max width */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit font styles */
+body, button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Reset border and outline */
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+/* Remove background and border from buttons */
+button {
+  background: none;
+  cursor: pointer;
+}
+
