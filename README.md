@@ -1,2 +1,3 @@
-# 30-JS-Projects
-30 Javascript Projects for fun practice only
+# 30 Native JS - Simple Projects without framework
+
+Goal: Recap JS Knowledge and Skill Improvement
