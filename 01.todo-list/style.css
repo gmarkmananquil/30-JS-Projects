@@ -15,7 +15,7 @@ body{
     font-family: "Roboto", sans-serif;
     background: var(--bg);
     color: #eee;
-    padding: 1rem;
+    padding: calc(2vw + 10px);
     padding-bottom: 100px;
 }
 
@@ -84,7 +84,7 @@ header{
 @media(min-width: 1200px){
     .list{
         display: grid;
-        grid-auto-rows: 12vh;
+        grid-auto-rows: auto;
         grid-template-columns: 1fr 1fr;
     }
 
