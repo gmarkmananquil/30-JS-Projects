@@ -2,6 +2,19 @@ let tasker = () => {
 
     const _data = {
         tasks: [
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here. dsfdsfdfs dfdsf sdfsd dsfdsf dsfdsfds dsfsdfsfsd.."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
+            { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
             { status: 0, date_done: null, date: "11/10/2024", text: "Your task should appear here..."},
             { status: 1, date_done: "11/12/2024", date: "11/12/2024", text: "Yesterdays task"},
             { status: 1, date_done: "11/12/2024", date: "11/11/2024", text: "Haircut"},
@@ -9,12 +22,6 @@ let tasker = () => {
         /* crud */
         add_task: (obj) => {
             _data.tasks.push(obj);
-        },
-        delete: (obj) => {
-            _data.tasks.splice(obj, 1);
-        },
-        add_hist: (data) => {
-            _data.history.push(data);
         },
         display: () => {
             _data.tasks.forEach(   e => e.status == 1 ? "" : $_list.innerHTML += _data.list_template(e));
