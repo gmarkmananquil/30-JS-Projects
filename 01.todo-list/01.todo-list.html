@@ -21,52 +21,25 @@
     </header>       
 
     <div class="list">
-        <div class="list-item">
+        <!-- <div class="list-item">
             <span class="icon-wrapper">
                 <i class="fa fa-check" aria-hidden="true"></i>
             </span>
             <span class="text">
                 Dashboard project for school
             </span>
-        </div>
-        <div class="list-item">
-            <span class="icon-wrapper">
-                <i class="fa fa-map" aria-hidden="true"></i>
-            </span>
-            <span class="text">
-                Meeting Mr.Brian O'Connor
-            </span>
-        </div>
-        <div class="list-item">
-            <span class="icon-wrapper">
-                <i class="fa fa-bank" aria-hidden="true"></i>
-            </span>
-            <span class="text">
-                Go to Bank Office
-            </span>
-        </div>
+        </div>-->
     </div>
 
     <div class="history">
         <h3>Past Activity</h3>
         <ul>
-            <li class="hist-item">
+            <!-- <li class="hist-item">
                 <span class="date">Mon, Nov 5</span>
                 <span class="text">Stikom Library Project</span>
                 <span class="tag">Missing</span>
                 
-            </li>
-            <li class="hist-item">
-                <span class="date">Mon, Nov 5</span>
-                <span class="text">Design Thinking Workshop</span>
-                <span class="tag success">Success</span>
-                
-            </li>
-            <li class="hist-item">
-                <span class="date">Mon, Nov 5</span>
-                <span class="text">Making babies</span>
-                <span class="tag">Success</span>                
-            </li>
+            </li>-->
         </ul>
     </div>
 
@@ -87,35 +60,18 @@
                 <span class="close">&times;</span>
             </div>
             
-            <div class="form">
-
-                
+            <form class="form">
                 <label for="task">
                     <span>Enter your task here</span>
-                    <textarea name="task" id="task" placeholder="Task"></textarea>
-                    <!-- <input type="text" placeholder="Task"  id="task"> -->
+                    <textarea name="text" id="task" placeholder="Task"></textarea>
                 </label>
-
-                <label for="date">
+                <label for="task">
                     <span>Date to finish</span>
-                    <input type="text" placeholder="Date" id="date">
-                </label>
-
-                <label for="date">
-                    <span>Status of this task</span>
-                    <select name="status" id="status">
-                        <option value="">Status</option>
-                        <option value="success">success</option>
-                        <option value="missing">missing</option>
-                        <option value="pending">pending</option>
-                        <option value="failed">failed</option>
-                    </select>
+                    <input type="date" id="deadline" name="date" placeholder="Deadline"/>
                 </label>
 
                 <button class="submit"><i class="fa fa-save" aria-hidden="true"></i> Submit </button>
-
-            </div>
-
+            </form>
         </div>
     </div>
 
