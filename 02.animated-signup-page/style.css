@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --primary-color: #20066f;
+    --container-border-radius: 20px;
+    --bg-gradient: radial-gradient(circle, var(--primary-color) 30%, #16044b 99%);
+}
+
+* {
+    box-sizing: border-box;
+    /* transition: all 0.5s ease; */
+}
+
+*:focus{
+    outline: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+body{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container{
+    /* background: transparent; */
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 20px 10px #ccc;
+    position: relative;
+    border-radius: var(--container-border-radius);
+    height: 80vh;
+    gap: 0;
+    position: relative;
+}
+.container > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+.container .white{
+    flex-basis: 60%;
+    /* border: 1px solid #000; */
+    gap: 20px;
+    text-align: center;
+}
+    .container .white .sign-in{
+        display: block;
+    }
+
+    .container .white .sign-up{
+        display: none;
+    }
+
+    .white h2{
+        font-size: 3em;
+    }
+
+    .white .sm{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        vertical-align: middle;
+        gap: 20px;
+    }
+
+        .white .sm a{
+            text-align: center;
+            line-height: 2.1em;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8em;
+            border-radius: 100px;
+            box-shadow: 0px 0px 10px #ccc;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .white .sm a:hover{
+            box-shadow: 0px 0px 20px 10px #ddd;
+        }
+    
+    .white .form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .white .form .form-input{
+        background: #eee;
+        color: #444;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+    }
+        
+    .white .form .form-input input{
+        border: none;
+        background: #eee;
+        margin-left: 15px;
+        height: 49px;
+        color: #444;
+        width: 300px;
+    }
+
+    .white .form .separator{
+        transform:translateY(-23px);
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .white .form input[type='submit']{
+        background: var(--primary-color);
+        color: #fff;
+        text-align: center;
+        width: 50%;
+        padding: 20px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 50px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out; 
+    }
+
+        .white .form input[type='submit']:hover{
+            letter-spacing: 5px;
+            width: 60%;
+        }
+
+
+.container .gradient{
+    flex-basis: 40%;
+    background: var(--primary-color);
+    background: var(--bg-gradient);
+    border-top-right-radius: var(--container-border-radius);
+    border-bottom-right-radius: var(--container-border-radius);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #fff;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+    .container .gradient .sign-up{
+        display: none;
+    }
+    .container .gradient h2{
+        font-size: 3em;
+    }
+
+    .container .gradient p{
+        font-size: 1.5em;    
+    }
+
+    .container .gradient a{
+        margin-top: 20px;
+        display: grid;
+        place-content: center;
+        border: 1px solid #eee;
+        color: #eee;
+        text-transform: uppercase;
+        width: 200px;
+        border-radius: 50px;
+        height: 50px;
+        transition: all 0.3s ease-in-out;
+        margin: auto;
+    }
+
+        .container .gradient a:hover{
+            letter-spacing: 5px;
+            width: 250px;
+            box-shadow: 0px 0px 10px #eee;
+        }
+
+.container > div{
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.container .white.switch{
+    /* order: 2; */
+    transform: translateX(67%);
+}
+.container .gradient.switch {
+    /* order: 1; */
+    transform: translate(-150%);
+}
+
+.container .white.switch .sign-in{
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+.container .white.switch .sign-up{
+    display: block;
+}
+
+.container .gradient.switch .sign-in{
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+.container .gradient.switch .sign-up{
+    display: block;
+}
+
+.container .gradient.switch{
+    border-top-left-radius: var(--container-border-radius);
+    border-bottom-left-radius: var(--container-border-radius);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
